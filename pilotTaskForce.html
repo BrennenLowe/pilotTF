@@ -1,0 +1,57 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="../Documents/table-sorter.css">
+</head>
+
+<body>
+
+    <div class="searchSelection col-md-3 col-md-offset-2">
+        <label>Select a Field to Search:</label>
+        <div class="radio">
+            <label><input type="radio" id="participantLastName" />Participant Last Name</label> </div>
+        <div class="radio">
+            <label><input type="radio" id="radioBranchNumber" />Branch Number</label> </div>
+        <div class="radio">
+            <label><input type="radio" id="radioOPSPresidentED" />OPS President/ED</label> </div>
+    </div>
+    <div class="col-md-4 col-md-offset-2 text-center">
+        <div class="form-group">
+            <label>Enter One Of:</label><br />Participant Last Name<br />Branch Number<br />OPS President/ED (Full
+            Name)
+            <input type="text" class="form-control" id="fieldSearchQuery" /> </div>
+    </div>?
+    <div tabindex="-1" class="modal fade" id="taskForceModal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel"
+        style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #9f1c35;">
+                    <button class="close" aria-hidden="true" type="button" data-dismiss="modal">x</button>
+                    <h4 class="modal-title" style="color: white">Search Results</h4>
+                </div>
+                <div class="modal-body">
+                    <table id="pilotTaskForceTable" class="table table-bordered table-striped tablesorter">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>LOB</th>
+                                <th>Branch Name</th>
+                                <th>Pilot Task Force Name</th>
+                                <th>Pilot Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pilotTaskForce-table">
+                        </tbody>
+                    </table>??
+                </div>
+                <p align="middle" id="noResults" style="color:red; font-size:22px;">There were no results.</p>
+                <div class="modal-footer">
+                    <button class="btn btn-default" type="button" data-dismiss="modal">Close</button> </div>
+            </div>
+        </div>
+    </div>?
+    <center>
+        <a class="img-responsive img-thumbnail button btn-spo-primary" id="submitButton" data-toggle="modal" style="width: 14em; margin: 2px; padding: 11px;">
+            Search �</a>??<br /></center>
+    <p align="middle" id="errorMessage" style="color:red; font-size:16px;">Please Select a "Search Field" and Enter in a "Search Term".</p>
+
+</body>
